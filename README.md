@@ -1,3 +1,8 @@
+![image](https://github.com/user-attachments/assets/db39bfc4-df5e-4078-8308-28729568f36e)
+
+
+
+
 # 🖥️ FredSys
 ### Modular & Secure Terminal Operating System in Pure Python
 
