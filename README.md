@@ -3,124 +3,65 @@
 
 
 
-# 🖥️ FredSys
-### Modular & Secure Terminal Operating System in Pure Python
+# 💻 FredSys v2.0 — Terminal Operating System
 
+> Sistema Operacional de Terminal (TUI) feito em Python puro.  
+> Compatível com **Windows**, **Linux** e **Android (Termux)**.  
+> Zero dependências externas — funciona com Python 3 puro.
 
-                T E R M I N A L   O P E R A T I N G   S Y S T E M
-                         V E R S I O N   2 . 0
+---
 
-╔══════════════════════════════════════════════════════╗
-║ ⚙️ M O D U L A R • S E C U R E • P U R E P Y T H O N ⚙️ ║
-╚══════════════════════════════════════════════════════╝
+## 🚀 Como executar
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-📌 OFFICIAL PROJECT OVERVIEW
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+**Linux / Android (Termux)**
+```bash
+python3 fredsys_v2.py
+```
 
-FredSys v2.0 is a fully modular Terminal Operating System (TUI) developed entirely in Python using only the Standard Library.
+**Windows (CMD ou PowerShell)**
+```cmd
+python fredsys_v2.py
+```
 
-The project simulates a structured operating environment inside the terminal, combining:
+**Requisito mínimo:** Python 3.6+  
+Verifique sua versão com `python --version` ou `python3 --version`
 
-• Clean architecture
-• Secure authentication
-• Dynamic module management
-• ANSI-based cyberpunk interface
-• Cross-platform compatibility
+---
 
-Supported environments:
+## ✨ Funcionalidades
 
-• Windows (CMD / PowerShell)
-• Linux
-• Android (Termux)
+| Módulo | Descrição |
+|--------|-----------|
+| 🔐 **Autenticação** | Login e criação de conta com senha em hash SHA-256 |
+| 🛒 **App Store** | Instale e desinstale apps por usuário |
+| 📝 **Notepad** | Bloco de notas com salvar e leitura de arquivos |
+| 🔢 **Calculadora** | Expressões matemáticas com histórico de sessão |
+| 💻 **SysMonitor** | RAM, disco, IP local, SO e arquitetura |
+| 📁 **File Explorer** | Navegar, criar e deletar arquivos e pastas |
 
-No external dependencies.
-No frameworks.
-No pip installations.
+---
 
-Only disciplined Python engineering.
+## 📂 Arquivos gerados localmente
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-⚙️ SYSTEM ARCHITECTURE
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Estes arquivos são criados automaticamente na primeira execução:
+```
+fredsys_users.json    → Contas de usuário (senhas em SHA-256)
+fredsys_config.json   → Apps instalados por usuário
+MeusDocumentos/       → Notas salvas pelo Notepad
+```
 
-FredSys is built upon modular function-based architecture, ensuring maintainability and separation of concerns.
+> ⚠️ Esses arquivos estão no `.gitignore` e não são enviados ao GitHub.
 
-Core principles:
+---
 
-• Structured navigation via numeric menus
-• Robust input validation
-• Automatic terminal clearing (OS-aware)
-• Persistent configuration via JSON
-• Fully commented source code for educational clarity
+## 🛠️ Tecnologias
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-🔐 AUTHENTICATION LAYER
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+- **Linguagem:** Python 3 puro
+- **Bibliotecas:** `os` `sys` `json` `hashlib` `platform` `datetime` `shutil` `socket`
+- **Interface:** ANSI Escape Codes (TUI Cyberpunk)
 
-• Account creation
-• Login validation
-• Automatic creation of fredsys_users.json
-• SHA-256 password hashing using hashlib
-• No plaintext credential storage
+---
 
-Security is embedded in the foundation.
+## 📄 Licença
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-🏪 PACKAGE MANAGER (APP STORE MODULE)
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-• Applications start as non-installed
-• Installation state saved in fredsys_config.json
-• Main Menu dynamically loads installed modules
-• Modular and scalable design
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-🧩 BUILT-IN APPLICATION ECOSYSTEM
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-📝 Notepad
-• Multi-line editor
-• Persistent storage in MeusDocumentos/
-
-🧮 Advanced Calculator
-• Expression evaluation
-• Error handling
-
-📊 SysMonitor
-• RAM usage
-• OS version
-• Hostname
-• Local IP
-• Disk statistics
-
-📁 File Explorer
-• Directory navigation
-• File details
-• Folder management
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-🧱 TECHNICAL STACK
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-• os
-• sys
-• json
-• hashlib
-• platform
-• datetime
-• shutil
-
-100% Standard Library.
-Fully portable.
-Architecture-focused.
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-🖥️ F R E D S Y S v 2 . 0
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-“Lightweight by design.
-Structured by architecture.
-Secure by default.”
-
-— FredSys Development
+MIT License — sinta-se livre para usar, modificar e distribuir.
