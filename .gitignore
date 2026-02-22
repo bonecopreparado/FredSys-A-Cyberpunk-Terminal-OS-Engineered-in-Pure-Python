@@ -1,0 +1,13 @@
+# Dados criados pelo FredSys (gerados localmente)
+fredsys_users.json
+fredsys_config.json
+MeusDocumentos/
+
+# Cache do Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Ambientes virtuais
+venv/
+.env
