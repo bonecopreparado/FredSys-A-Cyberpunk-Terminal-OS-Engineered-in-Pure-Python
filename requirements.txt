@@ -1,0 +1,2 @@
+# FredSys usa apenas bibliotecas nativas do Python 3
+# Nenhuma instalação necessária!
